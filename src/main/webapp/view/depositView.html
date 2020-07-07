@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>存款</title>
+    <link rel="stylesheet" type="text/css" href="../css/depositCSS.css" />
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../viewjs/mainView.js" type="text/javascript"></script>
+    <script src="../viewjs/depositMoney.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="inputMoney">
+    请输入存储金额： <input type="text" id="saveMoneyNumber" name="saveMoneyNumber">
+</div >
+
+
+<select name="currencyType">
+        <option value="CNY">人民币</option>
+        <option value="JPY">日元</option>
+        <option value="USD">美元</option>
+        <option value="EUR">欧元</option>
+        <option value="GBP">英镑</option>
+</select>
+
+<div id="button">
+       <button id="savebtn" onclick="desavebtn()">确认</button>
+</div>
+<h5 id="showMoney" ></h5>
+
+<button id="toMain"onclick="toMainbtn()">返回主界面</button>
+</body>
+</html>

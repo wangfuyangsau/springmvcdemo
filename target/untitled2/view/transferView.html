@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>转账</title>
+    <link rel="stylesheet" type="text/css" href="../css/changePasswordCSS.css" />
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../viewjs/mainView.js" type="text/javascript"></script>
+</head>
+<body>
+<div>
+    <p>请输入转入账号：</p>
+    <input type="text" id="toAccount" name="toAccount">
+    <p>请输入金额：</p>
+    <input type="text" id="toMoney" name="toMoney">
+    <p>  <button id="transfer">确定</button> <button id="cancel">取消</button></p>
+</div>
+<script>
+    var flag1=false;
+    var flag2=false;
+    $('#transfer').click(function () {
+        var jsonData={
+            transferAccountId:$('#toAccount').val(),
+            transferMoneyNumber:$('#toMoney').val(),
+            billAffairType:"transfer",
+            billTradeBalance:$('#toMoney').val(),
+            billCurrencyType:"CNY"
+        };
+        $.ajax({
+            type:"POST",
+            async:false,
+            dataType:'text',
+            url:"../BankAccount/transferMoney",
+            contentType : "application/json",
+            data:JSON.stringify(jsonData),
+            success:function (data) {
+                if(data=="true"){
+                  flag1=true;
+                    $.ajax({
+                        type:"POST",
+                        async:false,
+                        dataType:'text',
+                        url:"../BankBill/insertBill",
+                        contentType : "application/json",
+                        data:JSON.stringify(jsonData),
+                        success:function (data) {
+                            if(data=="true"){
+                                flag2=true;
+                                alert("转账成功！");
+                                window.location.href="showBalanceView.html"
+                            }
+                            else{
+                                alert("转账失败！");
+                                $("#toMoney").val("");
+                                $("#toAccount").val("");
+                            }
+                        }
+                    });
+
+                }
+                else{
+                    alert("转账失败！");
+                    $("#toMoney").val("");
+                    $("#toAccount").val("");
+                }
+            }
+        });
+
+    })
+
+    $('#cancel').click(function () {
+        window.location.href="mainView.html"
+
+    })
+</script>
+<button id="toMain" onclick="toMainbtn()">返回主界面</button>
+</body>
+</html>

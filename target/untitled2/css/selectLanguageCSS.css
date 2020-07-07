@@ -1,0 +1,28 @@
+body{
+    font-family: Arial;
+    font-size: 30px;
+    background-color: cornflowerblue;
+}
+span{
+    position: absolute;
+    left:35%;
+    top:25%;
+}
+#chinese {
+    width: 136px;
+    height: 43px;
+    margin-left: 27px;
+    margin-right: 10px;
+    background-color: coral;
+    border-radius: 15px;
+    border: burlywood solid 2px;
+}
+#english {
+    width: 136px;
+    height: 43px;
+    margin-left: 27px;
+    margin-right: 10px;
+    background-color: coral;
+    border-radius: 15px;
+    border: burlywood solid 2px;
+}

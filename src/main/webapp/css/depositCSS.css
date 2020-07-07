@@ -1,0 +1,59 @@
+body{
+    font-family: Arial;
+    font-size: 30px;
+    background-color: cornflowerblue;
+
+}
+table {text-align: center;
+    vertical-align:middle;
+    margin: 0;
+    width: 15cm;
+    height: 10cm;}
+div#inputMoney {
+     position: absolute;
+     left:25%;
+     top: 15%;
+     width: 15cm;
+     height: 10cm;
+     border: dimgray solid;
+     border-radius: 10px;
+     padding: 1cm;
+ }
+div#button {
+    position: absolute;
+    left:42%;
+    top: 55%;
+
+
+}
+button#savebtn{
+    font-size: 30px;
+    width: 200px;
+    height: 70px;
+
+    background-color: coral;
+    border-radius: 15px;
+    border: burlywood solid 2px;
+}
+input{
+   position: relative;
+    font-size:30px;
+    left: 18%;
+}
+h5#showMoney{
+    position: absolute;
+    left:45%;
+    top: 65%;
+}
+button#toMain{
+    position: absolute;
+    right: 5%;
+    bottom: 5%
+}
+select{
+    font-size: 30px;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    background-color: darkgrey;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示余额</title>
+    <link rel="stylesheet" type="text/css" href="../css/showBalanceView.css" />
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../viewjs/mainView.js" type="text/javascript"></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $.ajax({
+            type:"POST",
+            async:true,
+            dataType:'text',
+            url:"../BankAccount/queryBalance",
+            success:function (data) {
+                $('[name="accountBalance"]').val(data);
+            }
+        });
+    });
+</script>
+<div>
+    <p>当前账户余额为：</p>
+    <input type="text" readonly="readonly" id="balance" value="00.00" name="accountBalance">
+    <p>单日最大取值金额为：5000</p>
+</div>
+<button id="toMain" onclick="toMainbtn()">返回主界面</button>
+</body>
+</html>

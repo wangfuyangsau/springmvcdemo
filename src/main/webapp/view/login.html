@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" type="text/css" href="../css/loginCSS.css" />
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../viewjs/login.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="form">
+<!--TODO使用ajax实现交互-->
+       <table>
+       <tr><td>账号：</td><td> <input id="uname" type="text" name="accountCardId"></td></tr>
+       <tr><td>密码：</td><td><input id="upwd"  type="password" name="accountPassword"></td></tr>
+       </table>
+</div>
+<div id="button">
+    <span id="button1"><button id="loginbtn" onclick="loginbtn()">登录</button></span>
+    <span id="button2"><button id="cancelbtn" onclick="cancelbtn()">取消</button></span>
+
+</div>
+<div id="creatediv"><button id="createbtn" onclick="createbtn()" >开户</button></div>
+</body>
+</html>

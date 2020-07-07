@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>取款</title>
+    <link rel="stylesheet" type="text/css" href="../css/drawMoneyCSS.css" />
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../viewjs/mainView.js" type="text/javascript"></script>
+    <script src="../viewjs/drawMoney.js" type="text/javascript"></script>
+
+</head>
+<body>
+<p>请输入金额：</p>
+<div id="getMoney">
+      <input id="getMoneyNumber" type="text" name="getMoneyNumber">
+</div>
+<div  id="selectMoney">
+    <table>
+        <tr><td><button id="get300" onclick="scanbtn(this)">300</button></td><td><button id="get500" onclick="scanbtn(this)">500</button></td></tr>
+        <tr><td><button id="get800" onclick="scanbtn(this)">800</button></td><td><button id="get1000" onclick="scanbtn(this)">1000</button></td>
+        <tr><td><button id="get1500" onclick="scanbtn(this)">1500</button></td><td><button id="getOther" onclick="getotherbtn()">其他金额</button></td></tr>
+    </table>
+</div>
+<button id="getbtn" onclick="drgetbtn()">确定</button>
+<h5 id="showMoney"></h5>
+<button id="toMain" onclick="toMainbtn()">返回主界面</button>
+</body>
+</html>

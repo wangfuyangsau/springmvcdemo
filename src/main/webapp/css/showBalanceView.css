@@ -1,0 +1,22 @@
+body{
+    font-family: Arial;
+    font-size: 30px;
+    background-color: cornflowerblue;
+
+}
+input{
+    font-size: 30px;
+}
+div{
+    position: absolute;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 35%;
+}
+
+#toMain{
+    position: absolute;
+    right: 5%;
+    bottom: 5%
+}

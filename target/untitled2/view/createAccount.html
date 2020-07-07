@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开户</title>
+    <link rel="stylesheet" type="text/css" href="../css/createAccountCSS.css" />
+    <script src="../js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../viewjs/createAccount.js" type="text/javascript"></script>
+    <script src="../viewjs/mainView.js" type="text/javascript"></script>
+</head>
+<body>
+<div>
+<table style="text-align: center">
+    <tr><td>用户姓名</td><td><input name="userName" type="text"></td></tr>
+    <tr><td>身份证号</td><td><input name="userIdentify" type="text"></td></tr>
+    <tr><td>手机号码</td><td><input name="userTelnum" type="text"></td></tr>
+    <tr><td>家庭住址</td><td><input name="userAddress" type="text"></td></tr>
+    <tr>
+        <td>账户类型</td>
+        <td><input name="accountType" type="radio" value="debit" checked>借记卡
+        <input name="accountType" type="radio" value="credit">信用卡</td>
+    </tr>
+
+    <tr><td>密码</td><td><input name="accountPassword" type="password"></td></tr>
+    <tr><td>确认密码</td><td><input name="rpwd" type="password"></td></tr>
+    <tr><td></td><td><button id="createOkbtn" onclick="checkInfo()" >确认</button><button id="createCancelbtn " onclick="cancelbtn()">
+        取消</button></td></tr>
+</table>
+</div>
+<button id="toMain" onclick="toMainbtn()">返回主界面</button>
+</body>
+</html>

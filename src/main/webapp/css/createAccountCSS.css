@@ -1,0 +1,30 @@
+body{
+    font-family: Arial;
+    font-size: 30px;
+    background-color: cornflowerblue;
+
+}
+div{
+    position: absolute;
+    left: 32%;
+    top: 20%;
+}
+input{
+    font-size: 30px;
+}
+button{
+    width: 130px;
+    height: 49px;
+    font-size: 30px;
+    margin: 10px;
+
+}
+#toMain{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    width: 82px;
+    height: 23px;
+    font-size: 13px;
+
+}
